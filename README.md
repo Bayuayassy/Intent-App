@@ -4,7 +4,6 @@ Nama &nbsp; &nbsp;: Bayu Maulana Ayassy<br>
 NIM&nbsp; &nbsp; &nbsp; : 312210166<br>
 Kelas&ensp; &nbsp; : TI.22.A.1<br>
 Dosen &nbsp; : Donny Maulana, S.Kom., M.M.S.I.<br><br>
-*Semua code sudah saya sertakan dalam repository ini. Tekan tombol garis tiga diatas untuk menuju ke setiap heading.*
 
 ## Perintah Tugas
 Project membuat aplikasi intent, yang menghubungkan semua activity yang sudah dibuat sebelumnya.<br>
@@ -15,10 +14,10 @@ Pertama, yang akan Saya lakukan adalah membuat Launcher Splash Logo, atau menamp
 Caranya adalah :<br>
 
 - Membuat sebuah Drawable Resource File baru, untuk background logo launcher kita nanti. Buat file baru pada directory *res/drawable/disini*.<br>
-![new](https://github.com/RhendyDikiN/Intent-App/assets/115677376/42df77da-946c-4636-a367-99a6a4886097)<br>
+
 
 - Jika file berhasil dibuat, kita tambahkan terlebih dahulu logo yang kita miliki ke dalam project kita, caranya hanya copy logonya, lalu paste di folder *drawable* tadi.<br>
-![copaslogo](https://github.com/RhendyDikiN/Intent-App/assets/115677376/08239c2f-0d4d-4f3d-bdbd-4521a29d39e0)<br>
+
 
 - Lalu buka backgroundlauncher.xml yang sudah dibuat tadi, dan masukan code ini :<br>
 ```
@@ -43,7 +42,6 @@ Caranya adalah :<br>
 ```
 
 - Lanjut, kita buat java class nya, agar splashscreen bisa berjalan.<br>
-![ezgif com-video-to-gif](https://github.com/RhendyDikiN/Intent-App/assets/115677376/b2548459-9ed2-4cbe-8582-2f3153ae8796)<br>
 didalam SplashScreen.java ini, kita buat codenya, seperti ini :<br>
 ```
 package com.example.tugassembilan;
@@ -166,7 +164,7 @@ Caranya adalah:<br>
 ```
 >Background disini sesuai dengan keinginan, tambahkan gambar kedalam folder *drawable* seperti memasukan logo pada cara sebelumnya.<br>
 >Tampilan desain:<br>
->![image](https://github.com/RhendyDikiN/Intent-App/assets/115677376/6bdc4699-0318-4e93-9a91-9a319cf06427)
+
 
 - Setelah itu kita buka, MainActivity.java untuk menambahkan code intent untuk masing-masing tombol.<br>
 ```
@@ -293,7 +291,7 @@ Didalam AndroidManifest.xml ini kita tambahkan semua .java dari semua project ki
 ## 4. Hasil RUN
 Berikut video hasil RUN, dari aplkasi yang sudah saya buat ini :<br>
 
-https://github.com/RhendyDikiN/Intent-App/assets/115677376/104224a1-493b-41dd-9880-dd7429013064
+
 
 # Code Semua Project
 ## Strings, Colors, Dimens
