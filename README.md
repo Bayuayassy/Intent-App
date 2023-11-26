@@ -379,7 +379,7 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
 - **activity_hello.xml**
   ```
   <?xml version="1.0" encoding="utf-8"?>
-  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -390,7 +390,7 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_hello"
+        android:background="@drawable/hellowordbg"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"/>
 
@@ -401,7 +401,7 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
         android:fontFamily="courier"
         android:gravity="center"
         android:text="@string/hello_text"
-        android:textColor="@color/green"
+        android:textColor="@color/white"
         android:textSize="11pt"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -410,175 +410,30 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextSizeCheck" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
   ```
 - **HelloActivity.java**
   ```
-  package com.example.tugassembilan;
+  package com.example.intent_app;
 
-  import android.os.Bundle;
-  import androidx.appcompat.app.AppCompatActivity;
 
-  public class HelloActivity extends AppCompatActivity {
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_hello);
-      }
-  }
+public class HelloActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_hello);
+    }
+}
   ```
 ## B. Project Count
 - **activity_count.xml**
   ```
-  <?xml version="1.0" encoding="utf-8"?>
-  <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CountActivity">
-
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg_count"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop" />
-
-    <Button
-        android:id="@+id/button_toast"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:onClick="showToast"
-        android:text="@string/button_label_toast"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UsingOnClickInXml"/>
-
-    <Button
-        android:id="@+id/button_count"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
-        android:onClick="countUp"
-        android:text="@string/button_label_count"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="UsingOnClickInXml" />
-
-    <TextView
-        android:id="@+id/show_count"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/count_initial_value"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="160sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_count"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_toast"
-        tools:ignore="RtlCompat" />
-
-  </androidx.constraintlayout.widget.ConstraintLayout>
-  ```
-- **CountActivity.java**
-  ```
-  package com.example.tugassembilan;
-
-  import android.annotation.SuppressLint;
-  import android.os.Bundle;
-  import android.view.View;
-  import android.widget.TextView;
-  import android.widget.Toast;
-
-  import androidx.appcompat.app.AppCompatActivity;
-
-  public class CountActivity extends AppCompatActivity {
-  private int nCount = 0;
-
-  private TextView nShowCount;
-
-  @SuppressLint("MissingInflatedId")
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_count);
-      nShowCount = findViewById(R.id.show_count);
-      }
-
-      public void showToast(View view){
-      Toast toast = Toast.makeText(this, "Menghitung Bilangan",
-          Toast.LENGTH_SHORT);
-          toast.show();
-      }
-
-      @SuppressLint("SetTextI18n")
-      public void countUp(View view){
-          nCount++;
-      if (nShowCount != null)
-          nShowCount.setText(Integer.toString(nCount));
-      }
-  }
-  ```
-
-## C. Project Sianida
-- **activity_sianida.xml**
-  ```
-  <?xml version="1.0" encoding="utf-8"?>
-  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      xmlns:tools="http://schemas.android.com/tools"
-      tools:context=".SianidaActivity">
-
-      <TextView
-          android:id="@+id/article_heading"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@color/colorPrimary"
-          android:padding="@dimen/padding_regular"
-          android:text="@string/article_title"
-          android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-          android:textColor="@android:color/white"
-          android:textStyle="bold" />
-
-        <ScrollView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/article_heading">
-
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
-
-              <TextView
-                  android:id="@+id/article_subheading"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:padding="@dimen/padding_regular"
-                  android:text="@string/article_subtitle"
-                  android:textAlignment="center"
-                  android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-                  android:textColor="#8D6E63" />
+  
+  ```lor="#8D6E63" />
 
               <TextView
                   android:id="@+id/article"
