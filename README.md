@@ -165,6 +165,7 @@ Caranya adalah:<br>
 >Background disini sesuai dengan keinginan, tambahkan gambar kedalam folder *drawable* seperti memasukan logo pada cara sebelumnya.<br>
 >Tampilan desain:<br>
 
+![tampilan](https://github.com/Bayuayassy/Intent-App/assets/115678251/ac88dbb9-7b66-4aea-adbf-a7278ef128d6)
 
 - Setelah itu kita buka, MainActivity.java untuk menambahkan code intent untuk masing-masing tombol.<br>
 ```
@@ -291,7 +292,7 @@ Didalam AndroidManifest.xml ini kita tambahkan semua .java dari semua project ki
 ## 4. Hasil RUN
 Berikut video hasil RUN, dari aplkasi yang sudah saya buat ini :<br>
 
-
+https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92ad-829046526b98
 
 # Code Semua Project
 ## Strings, Colors, Dimens
