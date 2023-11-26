@@ -323,8 +323,7 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
   > Berisi semua string dari project
   ```
   <resources>
-    <string name="app_name">Tugas Sembilan</string>
-
+    <string name="app_name">IntentApp</string>
     <string name="project_hello">Project Hello World</string>
     <string name="project_count">Project Count</string>
     <string name="project_sianida">Project Sianida</string>
@@ -349,13 +348,16 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
     <string name="article_subtitle">ICE COLD!</string>
 
     <string name="article_teks">Kasus kopi sianida berawal dari pertemuan Jessica Wongso, Mirna, dan Hanie Boon Juwita di Kafe Olivier Grand Indonesia (GI) pada 6 Januari 2016. Jessica datang lebih dahulu         dan memesan tempat dilayani resepsionis Cindy yang menawarkan meja nomor 54.</string>
-  </resources>
+</resources>
+
   ```
+
 - Colors
   > Berisi semua colors dari project
   ```
+
   <?xml version="1.0" encoding="utf-8"?>
-  <resources>
+<resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#323232</color>
@@ -364,7 +366,8 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-  </resources>
+</resources>
+
   ```
 - Dimens
   > Berisi code dimen untuk project sianida
