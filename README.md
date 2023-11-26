@@ -5,9 +5,29 @@ NIM&nbsp; &nbsp; &nbsp; : 312210166<br>
 Kelas&ensp; &nbsp; : TI.22.A.1<br>
 Dosen &nbsp; : Donny Maulana, S.Kom., M.M.S.I.<br><br>
 
-## Perintah Tugas
-Project membuat aplikasi intent, yang menghubungkan semua activity yang sudah dibuat sebelumnya.<br>
+## Tugas :
+```
+Buatkanlah :
 
+1. Launcher Splash logo masing-masing Individu 
+
+2. Buatkanlah untuk menampilkan semua project sebelum UTS dengan metode Ekplisit Intent dan
+
+     Implisit Intent:
+
+    a. Project Hallo
+
+    b. Project Count
+
+    c. Project Sianida
+
+    d. Project TwoActivity
+
+    e. Project Set Alarm
+
+ 
+Untuk tampilan Layout Bebas, terima kasih.
+```
 
 ## 1. Launcher Splash Logo
 Pertama, yang akan Saya lakukan adalah membuat Launcher Splash Logo, atau menampilkan logo saat kita pertama kali membuka aplikasi.<br>
@@ -26,25 +46,25 @@ Caranya adalah :<br>
     <item android:drawable="@color/grey"/>
     <item>
         <bitmap
-            android:src="@drawable/logo"
+            android:src="@drawable/splashlauncer"
             android:gravity="center" />
     </item>
-</layer-list>
+
 ```
 >warna bisa menyesuaikan dengan keinginan, lalu masukan logo yang sudah kita tambahkan tadi.<br>
 
 - Lalu, buka **themes.xml** yang letaknya ada di *res/values/themes*, dan tambahkan code ini didalam resourcesnya :<br>
 ```
-  <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/backgroundlauncher</item>
+ <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splashlauncer</item>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
-  </style>
+    </style>
 ```
 
 - Lanjut, kita buat java class nya, agar splashscreen bisa berjalan.<br>
 didalam SplashScreen.java ini, kita buat codenya, seperti ini :<br>
 ```
-package com.example.tugassembilan;
+package com.example.intent_app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -72,12 +92,11 @@ public class SplashScreen extends AppCompatActivity {
 - Buka **AndroidManifest.xml**, dan tambahkan code berikut didalam *application* :<br>
 ```
         <activity
-            android:name=".SplashScreen"
-            android:exported="true"
-            android:theme="@style/SplashScreen">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.SET_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 ```
@@ -104,7 +123,7 @@ Caranya adalah:<br>
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/background" />
+        android:src="@drawable/bghome" />
 
     <Button
         android:id="@+id/btnHelloWorld"
