@@ -188,7 +188,11 @@ Caranya adalah:<br>
 
 - Setelah itu kita buka, MainActivity.java untuk menambahkan code intent untuk masing-masing tombol.<br>
 ```
-package com.example.tugassembilan;
+package com.example.intent_app;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -259,11 +263,11 @@ Didalam AndroidManifest.xml ini kita tambahkan semua .java dari semua project ki
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/backgroundlauncer"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/backgroundlauncer"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TugasSembilan"
+        android:theme="@style/Base.Theme.IntentApp"
         tools:targetApi="31">
 
         <activity
@@ -318,9 +322,8 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
 - Strings
   > Berisi semua string dari project
   ```
-  <resources>
-    <string name="app_name">Tugas Sembilan</string>
-
+ <resources>
+    <string name="app_name">IntentApp</string>
     <string name="project_hello">Project Hello World</string>
     <string name="project_count">Project Count</string>
     <string name="project_sianida">Project Sianida</string>
@@ -345,13 +348,13 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
     <string name="article_subtitle">ICE COLD!</string>
 
     <string name="article_teks">Kasus kopi sianida berawal dari pertemuan Jessica Wongso, Mirna, dan Hanie Boon Juwita di Kafe Olivier Grand Indonesia (GI) pada 6 Januari 2016. Jessica datang lebih dahulu         dan memesan tempat dilayani resepsionis Cindy yang menawarkan meja nomor 54.</string>
-  </resources>
+</resources>
   ```
 - Colors
   > Berisi semua colors dari project
   ```
   <?xml version="1.0" encoding="utf-8"?>
-  <resources>
+<resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#323232</color>
@@ -360,16 +363,16 @@ https://github.com/Bayuayassy/Intent-App/assets/115678251/b7e26913-e6ea-4729-92a
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-  </resources>
+</resources>
   ```
 - Dimens
   > Berisi code dimen untuk project sianida
   ```
   <?xml version="1.0" encoding="utf-8"?>
-  <resources>
+<resources>
     <dimen name="padding_regular">10dp</dimen>
     <dimen name="line_spacing">5sp</dimen>
-  </resources>
+</resources>
   ```
   
 ## A. Project Hello World
